@@ -25,14 +25,14 @@
     1. python version 3.8.
     2. La libreria unittest de python instalada.
    
-#### Ejecución
+  ### Ejecución
     
-**Clonar el repositorio**: git clone https://github.com/JohanS11/ComplexCalculator.git
+  **Clonar el repositorio**: git clone https://github.com/JohanS11/ComplexCalculator.git
 
-**Ejecutar el archivo pruebas.py**
+  **Ejecutar el archivo pruebas.py**
 
-**Para sistemas linux python3 pruebas.py o ./pruebas.py**
+  **Para sistemas linux python3 pruebas.py o ./pruebas.py**
 
-**NOTA:** Los archivos "pruebas.py" y "libreria.py" deben estar en el mismo path
+  **NOTA:** Los archivos "pruebas.py" y "libreria.py" deben estar en el mismo path
 
-**Para sistemas Windows .\pruebas.py**
+  **Para sistemas Windows .\pruebas.py**

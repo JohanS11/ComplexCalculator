@@ -36,3 +36,7 @@
   **NOTA:** Los archivos "pruebas.py" y "libreria.py" deben estar en el mismo path
 
   **Para sistemas Windows .\pruebas.py**
+  
+  ### Ejecución de pruebas
+  
+   ![pruebas1](img/pruebas1.PNG)

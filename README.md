@@ -40,7 +40,7 @@
   
    ![pruebas1](img/pruebas1.PNG)
    
-  ## Este projecto fue construido con
+  ## Este proyecto fue construido con
   
    * [Python 3.8](https://www.python.org) Lenguaje para realizar funcionalidades
    * [Git 2.26.2](https://git-scm.com) Administrador de versionamiento

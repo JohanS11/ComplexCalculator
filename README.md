@@ -1,8 +1,5 @@
 # ComplexCalculator
 
-**Autor**: Johan Sebastián Arias
-
-**Asignatura**: CNTY 2020-2
 
 ## Descripción
 
@@ -10,6 +7,7 @@
   para el estudio de la computación cuántica.
 
 ## Operaciones soportadas por la calculadora
+
 1. Suma
 2. Producto
 3. Resta
@@ -22,6 +20,7 @@
 ## Manual de uso 
 
   ### Requerimientos
+  
     1. python version 3.8.
     2. La libreria unittest de python instalada.
    
@@ -31,12 +30,27 @@
 
   **Ejecutar el archivo pruebas.py**
 
-  **Para sistemas linux python3 pruebas.py o ./pruebas.py**
+  **Para sistemas linux:** python3 pruebas.py o ./pruebas.py
+  
+  **Para sistemas Windows .\pruebas.py**
 
   **NOTA:** Los archivos "pruebas.py" y "libreria.py" deben estar en el mismo path
-
-  **Para sistemas Windows .\pruebas.py**
   
-  ### Ejecución de pruebas
+  ## Ejecución de pruebas
   
    ![pruebas1](img/pruebas1.PNG)
+   
+  ## Este projecto fue construido con
+  
+   * [Python 3.8](https://www.python.org) Lenguaje para realizar funcionalidades
+   * [Git 2.26.2](https://git-scm.com) Administrador de versionamiento
+   * [Visual Studio Code](https://code.visualstudio.com) IDE para construir y modificar código.
+  
+  ## Author
+  
+   [JohanS11](https://github.com/JohanS11) Johan Sebastian Arias Amador
+   
+  ## License 
+  
+  This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for more details.
+  

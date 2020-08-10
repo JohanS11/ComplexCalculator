@@ -30,9 +30,17 @@
 
   **Ejecutar el archivo pruebas.py**
 
-  **Para sistemas linux:** python3 pruebas.py o ./pruebas.py
+  **Para sistemas linux:** 
   
-  **Para sistemas Windows .\pruebas.py**
+  cd ComplexCalculator
+  
+  python3 pruebas.py o ./pruebas.py
+  
+  **Para sistemas Windows:
+  
+  cd ComplexCalculator
+  
+  .\pruebas.py**
 
   **NOTA:** Los archivos "pruebas.py" y "libreria.py" deben estar en el mismo path
   

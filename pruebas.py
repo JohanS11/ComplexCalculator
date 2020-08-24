@@ -112,6 +112,11 @@ class Test_complejos(unittest.TestCase):
     def testdeberiacalculardistancia(self):
         self.assertEqual(lib.calcdistanciaentrevectores([(1,2),(2,4),(5,0)],[(0,2),(1,2),(4,0)]),2.65)
 
+    def testdeberiaserunitaria(self):
+        self.assertTrue(lib.isunitaria([[(2/3,0),(-2/3,1/3)],[(2/3,1/3),(2/3,0)]]))
+
+    def testdeberiaserhermitian(self):
+        self.assertTrue(lib.ishermitian([[(7,0),(6,5)],[(6,-5),(-3,0)]]))
     
 if __name__ == '__main__' :
     unittest.main()

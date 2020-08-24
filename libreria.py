@@ -488,4 +488,58 @@ def calcdistanciaentrevectores(v,w):
     resta = restavectores(v,w)
     return norma(resta)
 
+def matrizIdentidad(M):
+
+    """ Description retoran la matriz identidad de M
+    :type M: matrix 
+    :param M: Matriz de la forma [[(a,b),(c,d)],[(f,h),(g,l)]]
+
+    :raises:
+
+    :rtype: matrix, matriz identidad [[(1,0),(0,0)],[(0,0),(1,0)]]
+    """
+    identidad = [[(0,0) for i in range(len(M))] for j in range(len(M))]
+    for i in range(len(M)):
+        for j in range(len(M)):
+            if (i==j):
+                identidad[i][j]=(1,0)
+            else:
+                identidad[i][j]=(0,0)
+    return identidad
+                
+
+
+
+def isunitaria(M):
+
+    """ Description Decide si una matriz es unitaria o no, la matriz debe ser cuadrada
+    :type M: matrix
+    :param M: Matriz de la forma [[(a,b),(c,d)],[(f,h),(g,l)]]
+    
+    :raises: Exception en caso que la matriz no sea cuadrada
+
+    :rtype: boolean
+    """
+    if (len(M) != len(M[0])):
+        raise Exception("La matriz no es cuadrada")
+    
+    ident = matrizIdentidad(M)
+    return multimatrices(M,dagamatriz(M)) == multimatrices(dagamatriz(M),M) == ident
+
+
+def ishermitian(M):
+
+    """ Description Decide si una matriz es hermitania o no, la matriz debe ser cuadrada
+    :type M:  matrix
+    :param M: Matriz de la forma [[(a,b),(c,d)],[(f,h),(g,l)]]
+    
+    :raises:
+
+    :rtype: boolean
+    """
+    if (len(M) != len(M[0])):
+        raise Exception("La matriz no es cuadrada")
+
+    return M == dagamatriz(M)
+
 

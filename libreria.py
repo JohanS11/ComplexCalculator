@@ -163,6 +163,18 @@ def fase(comp):
     return round(resultado,2)
 
 def sumavectores(v,w):
+    
+    """ Description: Adiciona dos vectores con dimensiones equivalentes
+    :type v: list
+    :param v: Vector 1 escrito de la forma [(1,2),(3,5)...(x,y)]
+
+    :type w: list
+    :param w: Vector 2 escrito de la forma [(1,2),(3,5)...(x,y)]
+
+    :raises: Exception en caso de que los vectores no tengan el mismo tamaño
+
+    :rtype: list - Vector resultante escrito de la forma [(a,b),(c,d),..(x,y)]
+    """
     if (len(v) != len(w)):
         raise Exception("Los vectores tienen diferentes longitudes no se pueden sumar")
     else:
@@ -172,6 +184,18 @@ def sumavectores(v,w):
     return rta
 
 def restavectores(v,w):
+    
+    """ Description: Sustrae dos vectores con dimensiones equivalentes
+    :type v: list
+    :param v:Vector 1 escrito de la forma [(1,2),(3,5)...(x,y)]
+
+    :type w: list
+    :param w: Vector 2 escrito de la forma [(1,2),(3,5)...(x,y)]
+ 
+    :raises: Exception en caso de que los vectores no tengan el mismo tamaño
+
+    :rtype: list - Vector resultante escrito de la forma [(a,b),(c,d),..(x,y)]
+    """
     if (len(v) != len(w)):
         raise Exception("Los vectores tienen diferentes longitudes no se pueden restar")
     else:
@@ -181,14 +205,47 @@ def restavectores(v,w):
     return rta
 
 def inversovector(v):
-     return escalarporvector(-1,v)
+    
+    """ Description: Retorna el inverso aditivo del vector insertado
+    :type v: list
+    :param v: Vector escrito de la forma [(1,2),(3,5)...(x,y)]
+
+    :raises: 
+
+    :rtype: Vector resultante escrito de la forma [(a,b),(c,d),..(x,y)]
+    """
+    return escalarporvector(-1,v)
 
 def escalarporvector(r,v):
+
+    """ Description: Retorna un vector multiplicado por un escalar (r*V)
+    :type r: int / float 
+    :param r: Escalar que será multiplicado por el vector
+
+    :type v: list 
+    :param v: Vector escrito de la forma [(a,b),(c,d)...(x,y)]
+
+    :raises: 
+
+    :rtype: list- Vector escrito de la forma [(ra,rb),(rc,rd)...(rx,ry)]
+    """
     for i in range(len(v)):
         v[i] = ((v[i][0] * r, v[i][1] * r))
     return v 
 
 def sumarmatrices(M,N):
+    
+    """ Description Adiciona dos matrices M,N
+    :type M: matrix 
+    :param M: Matriz 1 escrita de la forma [[(a,b),(d,c)],[(x,y),(f,g)]]
+
+    :type N: matrix
+    :param N: Matriz 2 escrita de la forma [[(a,b),(d,c)],[(x,y),(f,g)]]
+
+    :raises: Exception - en caso que las matrices no tengan tamaños equivalentes
+
+    :rtype: matrix- matriz resultante de la forma [[(a,b),(d,c)],[(x,y),(f,g)]]
+    """
     if (len(M) != len(N)):
         raise Exception("Las matrices no se puede sumar porque tienen tamaños distintos")
     else:
@@ -198,17 +255,45 @@ def sumarmatrices(M,N):
     return rta
 
 def inversomatriz(M):
+
+    """ Description: retorna el inverso aditivo de la matriz M
+    :type M: matrix 
+    :param M: Matriz escrita de la forma [[(a,b),(d,c)],[(x,y),(f,g)]]
+ 
+    :raises:
+
+    :rtype: matrix - Matriz resultante de la forma [[(a,b),(d,c)],[(x,y),(f,g)]]
+    """
     for i in range(len(M)):
         M[i] = inversovector(M[i])
     return M
 
 def multiescalarmatriz(r,M):
+
+    """ Description retorna la multiplicación entre r y M 
+    :type r: int / float
+    :param r: Escalar que será multiplicado por la matriz
+
+    :type M: matrix 
+    :param M: Matriz escrita de la forma [[(a,b),(d,c)],[(x,y),(f,g)]]
+
+    :raises:
+
+    :rtype: matrix
+    """
     for i in range(len(M)):
         M[i] = escalarporvector(r,M[i])
     return M
 
 def transpuestamatriz(M):
-    
+    """ Description calcula la matriz transpuesta de M
+    :type M: matrix
+    :param M: Matriz escrita de la forma [[(a,b),(d,c)],[(x,y),(f,g)]]
+
+    :raises:
+
+    :rtype: matrix
+    """
     trans = []
     for fil in range(len(M[0])):
         fila = []
@@ -218,6 +303,17 @@ def transpuestamatriz(M):
     return trans
 
 def transpuestavector(v):
+
+    """ Description Calcula el vector transpuesto de v
+    :type v: list
+    :param v: Vector escrito de alguna de estas dos formas:
+     1. [(1,2),(3,5)...(x,y)]
+     2. [[(1,2)],[(3,5)],[(6,5)]...,[(x,y)]]
+
+    :raises:
+
+    :rtype: list / matrix 
+    """
     rta = []
     for comp in v:
         if  (type(comp) is tuple):
@@ -227,12 +323,32 @@ def transpuestavector(v):
     return rta
 
 def conjugadomatriz(M):
+
+    """ Description: calcula la matriz conjugada de M
+    :type M: matrix
+    :param M: Matriz escrita de la forma [[(a,b),(d,c)],[(x,y),(f,g)]]
+
+    :raises:
+
+    :rtype: matrix
+    """
     for i in range(len(M)):
         for j in range(len(M[i])):
             M[i][j] = conjugado(M[i][j])  
     return M
 
 def conjugadovector(v):
+
+    """ Description calcula el vector conjugado de v
+    :type v: list / matrix 
+    :param v: Vector escrito de alguna de estas dos formas:
+     1. [(1,2),(3,5)...(x,y)]
+     2. [[(1,2)],[(3,5)],[(6,5)]...,[(x,y)]]
+
+    :raises:
+
+    :rtype: list / matrix
+    """
     rta = []
     for comp in v:
         if  (type(comp) is tuple):
@@ -242,13 +358,44 @@ def conjugadovector(v):
     return rta
 
 def dagamatriz(M):
+
+    """ Description retorna la matriz adjunta de M
+    :type M: matrix 
+    :param M: Matriz escrita de la forma [[(a,b),(d,c)],[(x,y),(f,g)]]
+
+    :raises:
+
+    :rtype: matrix
+    """
     return conjugadomatriz(transpuestamatriz(M))
 
 def dagavector(v):
+
+    """ Description retorna el vector adjunto de v 
+    :type v: list / matrix 
+    :param v: Vector escrito de alguna de estas dos formas:
+     1. [(1,2),(3,5)...(x,y)]
+     2. [[(1,2)],[(3,5)],[(6,5)]...,[(x,y)]]
+
+    :raises:
+
+    :rtype: matrix / list
+    """
     return (transpuestavector(conjugadovector(v)))
         
 def multimatrices(M,N):
 
+    """ Description: calcula la multiplicación de dos matrices M y N
+    :type M: matrix
+    :param M: Matriz 1 escrita de la forma [[(a,b),(d,c)],[(x,y),(f,g)]]
+
+    :type N: matrix
+    :param N: Matriz 2 escrita de la forma [[(a,b),(d,c)],[(x,y),(f,g)]]
+
+    :raises: Exception en caso de que las matrices tengan tamaños compatibles
+
+    :rtype: matrix
+    """
     if (len(M[0]) != len(N)):
         raise Exception("Las matrices no tienen tamaños compatibles")
     else:
@@ -262,9 +409,19 @@ def multimatrices(M,N):
                     rta[fila][col] = (new[0]+old[0], new[1]+old[1])
         return rta
 
-
-
 def accion(M,v):
+
+    """ Description Calcula la acción de un vector sobre una matriz
+    :type M: matrix 
+    :param M: Matriz escrita de la forma [[(a,b),(d,c)],[(x,y),(f,g)]]
+
+    :type v: list
+    :param v: Vector escrito de la forma [(a,b),(c,d)]
+
+    :raises: exception en caso de que no tengan tamaños compatibles
+
+    :rtype: matrix
+    """
     if (len(M[0]) != len(v)):
         raise Exception("El tamaño de la matriz y el vector no son compatibles") 
     else: 
@@ -273,6 +430,17 @@ def accion(M,v):
 
 def productointernovectores(v,w):
 
+    """ Description calcula el producto interno entre dos vectores
+    :type v: list 
+    :param v: Vector 1 escrito de la forma [(a,b),(c,d)]
+
+    :type w: list 
+    :param w: Vector2  escrito de la forma [(a,b),(c,d)]
+
+    :raises: exception en caso que los vectores no tengan tamaños compatibles
+
+    :rtype: tuple
+    """
     if (len(v) != len(w)):
         raise Exception("Los vectores no tienen tamaños compatibles")
     else:
@@ -289,6 +457,15 @@ def productointernovectores(v,w):
         return (aux,aux1)
          
 def norma(v):
+
+    """ Description calcula la norma (magnitud) del vector v
+    :type v: list
+    :param v: Vector escrito de la forma [(a,b),(c,d)]
+
+    :raises:
+
+    :rtype: float
+    """
     rta = 0
     for comp in v:
         rta += comp[0]**2 + comp[1]**2
@@ -297,6 +474,17 @@ def norma(v):
 
 def calcdistanciaentrevectores(v,w):
 
+    """ Description calcula la distancia entre dos vectores v y w
+    :type v: list
+    :param v: Vector 1 escrito de la forma [(a,b),(c,d)]
+
+    :type w: list
+    :param w: Vector 2 escrito de la forma [(a,b),(c,d)]
+
+    :raises:
+
+    :rtype: float
+    """
     resta = restavectores(v,w)
     return norma(resta)
 

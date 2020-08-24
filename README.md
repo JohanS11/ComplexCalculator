@@ -16,6 +16,23 @@
 6. Conjugado
 7. Conversión entre representaciones polar y cartesiano
 8. Retornar la fase de un número complejo.
+9. Adición de vectores complejos.
+10. Inverso (aditivo) de un vector complejo.
+11. Multiplicación de un escalar por un vector complejo.
+12. Adición de matrices complejas.
+13. Inversa (aditiva) de una matriz compleja.
+14. Multiplicación de un escalar por una matriz compleja.
+15.Transpuesta de una matriz/vector
+16. Conjugada de una matriz/vector
+20. Adjunta (daga) de una matriz/vector
+21. Producto de dos matrices (de tamaños compatibles)
+22. Función para calcular la "acción" de una matriz sobre un vector.
+23. Producto interno de dos vectores
+24. Norma de un vector
+25. Distancia entre dos vectores
+26. Revisar si una matriz es unitaria
+27. Revisar si una matriz es Hermitiana
+28. Producto tensor de dos matrices/vectores
 
 ## Manual de uso 
 
@@ -26,27 +43,35 @@
    
   ### Ejecución
     
-  **Clonar el repositorio**: git clone https://github.com/JohanS11/ComplexCalculator.git
+  **Clonar el repositorio**: ``git clone https://github.com/JohanS11/ComplexCalculator.git``
 
   **Ejecutar el archivo pruebas.py**
 
   **Para sistemas linux:** 
   
-  cd ComplexCalculator
+  ``cd ComplexCalculator``
   
-  python3 pruebas.py o ./pruebas.py
+  **Ejecutar las pruebas**:
   
-  **Para sistemas Windows:
+  ``python3 pruebas.py o ./pruebas.py``
   
-  cd ComplexCalculator
+  **Para sistemas Windows:**
   
-  .\pruebas.py**
+  ``cd ComplexCalculator``
+  
+  ``.\pruebas.py**``
 
   **NOTA:** Los archivos "pruebas.py" y "libreria.py" deben estar en el mismo path
   
   ## Ejecución de pruebas
   
    ![pruebas1](img/pruebas1.PNG)
+   
+ **Pruebas entrega 2**
+ 
+  ![pruebas2](img/pruebas2.PNG)
+ 
+  
    
   ## Este proyecto fue construido con
   

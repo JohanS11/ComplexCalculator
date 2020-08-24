@@ -22,7 +22,7 @@
 12. Adición de matrices complejas.
 13. Inversa (aditiva) de una matriz compleja.
 14. Multiplicación de un escalar por una matriz compleja.
-15.Transpuesta de una matriz/vector
+15. Transpuesta de una matriz/vector
 16. Conjugada de una matriz/vector
 20. Adjunta (daga) de una matriz/vector
 21. Producto de dos matrices (de tamaños compatibles)
@@ -30,9 +30,7 @@
 23. Producto interno de dos vectores
 24. Norma de un vector
 25. Distancia entre dos vectores
-26. Revisar si una matriz es unitaria
-27. Revisar si una matriz es Hermitiana
-28. Producto tensor de dos matrices/vectores
+
 
 ## Manual de uso 
 

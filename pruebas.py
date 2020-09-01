@@ -117,6 +117,11 @@ class Test_complejos(unittest.TestCase):
 
     def testdeberiaserhermitian(self):
         self.assertTrue(lib.ishermitian([[(7,0),(6,5)],[(6,-5),(-3,0)]]))
+
+    def testdeberiacalcularproductotensor(self):
+        self.assertEqual(lib.productoTensor([[(0,0),(1,0)],[(1,0),(0,0)]],[[(1/m.sqrt(2),0),(1/m.sqrt(2),0)],[(1/m.sqrt(2),0),(-1/m.sqrt(2),0)]])
+        ,[[(0.0, 0.0), (0.0, 0.0), (0.7071067811865475, 0.0), (0.7071067811865475, 0.0)], [(0.0, 0.0), (-0.0, 0.0), (0.7071067811865475, 0.0), (-0.7071067811865475, 0.0)], [(0.7071067811865475, 0.0), (0.7071067811865475, 0.0), (0.0, 0.0), (0.0, 
+        0.0)], [(0.7071067811865475, 0.0), (-0.7071067811865475, 0.0), (0.0, 0.0), (-0.0, 0.0)]])
     
 if __name__ == '__main__' :
     unittest.main()

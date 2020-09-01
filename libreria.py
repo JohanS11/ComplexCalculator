@@ -58,8 +58,8 @@ def multiplicar(compA,compB):
 
     :rtype:
     """
-    rtaReal = compA[0] * compB[0] - compA[1] * compB[1]
-    rtaImaginaria = compA[1] * compB[0] + compA[0] * compB[1]
+    rtaReal = float(compA[0] * compB[0] - compA[1] * compB[1])
+    rtaImaginaria = float(compA[1] * compB[0] + compA[0] * compB[1])
     resultado = (rtaReal,rtaImaginaria)
     return resultado
 
@@ -488,6 +488,7 @@ def calcdistanciaentrevectores(v,w):
     resta = restavectores(v,w)
     return norma(resta)
 
+
 def matrizIdentidad(M):
 
     """ Description retoran la matriz identidad de M
@@ -542,4 +543,40 @@ def ishermitian(M):
 
     return M == dagamatriz(M)
 
+def productoTensor(M,N):
+    """ Description Calcula el producto tensor de las matrices M y N
+    :type M:  matrix
+    :param M: Matriz de la forma [[(a,b),(c,d)],[(f,h),(g,l)]]
+    
+    :type N:  matrix
+    :param N: Matriz de la forma [[(a,b),(c,d)],[(f,h),(g,l)]]
+    :raises:
 
+    :rtype: matrix
+    """
+    aux = []
+    subLista = []
+    conta = len(N)
+    for i in M:
+        #print(i)
+        valorB = 0
+        valorA = 0
+        while valorA < conta:
+            for num1 in i:
+                #print("1")
+                #print(num1)
+                for num2 in N[valorB]:
+                    #print("2")
+                    #print(num2)
+                    subLista.append(multiplicar(num1,num2))
+            aux.append(subLista)
+            subLista = []
+            valorA +=1
+            valorB += 1
+    #for i in range(len(aux)):
+     #   print(*aux[i])
+    return aux
+
+
+#productoTensor([[(0,0),(1,0)],[(1,0),(0,0)]],[[(1/m.sqrt(2),0),(1/m.sqrt(2),0)],[(1/m.sqrt(2),0),(-1/m.sqrt(2),0)]])
+#print(multiplicar((0, 0),(0.7071067811865475, 0)))

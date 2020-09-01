@@ -30,6 +30,8 @@
 23. Producto interno de dos vectores
 24. Norma de un vector
 25. Distancia entre dos vectores
+26. Revisar si una matriz es unitaria
+27. Revisar si una matriz es Hermitiana
 
 
 ## Manual de uso 

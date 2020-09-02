@@ -573,10 +573,16 @@ def productoTensor(M,N):
             subLista = []
             valorA +=1
             valorB += 1
-    #for i in range(len(aux)):
-     #   print(*aux[i])
+    for i in range(len(aux)):
+        print(*aux[i])
     return aux
 
 
 #productoTensor([[(0,0),(1,0)],[(1,0),(0,0)]],[[(1/m.sqrt(2),0),(1/m.sqrt(2),0)],[(1/m.sqrt(2),0),(-1/m.sqrt(2),0)]])
 #print(multiplicar((0, 0),(0.7071067811865475, 0)))
+#print(accion([[(-1,0),(1,1),(0,0)],[(2,-1),(0,0),(1,0)],[(0,0),(1,-1),(0,1)]],[(1,0),(0,1),(1,1)]))
+#productoTensor([[(0,1),(1,0)],[(1,1),(2,0)]],[[(1,0),(0,1)]])
+#print(multiplicar((1,-3),(2,-1)))
+#print(productointernovectores([(0,1/m.sqrt2(2)),(0,1/m.sqrt(2))],[]))
+#print(productointernovectores([[(0,1)],[(1,-1)]]))
+#print(multimatrices([[(0,1),(-1,1)],[(2,0),(1,0)]],dagamatriz([[(1,0),(-1,0)],[(0,-1),(0,2)]])))

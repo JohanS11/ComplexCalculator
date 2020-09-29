@@ -32,6 +32,7 @@
 25. Distancia entre dos vectores
 26. Revisar si una matriz es unitaria
 27. Revisar si una matriz es Hermitiana
+28. Calcular dinámica de un sistema (Doble rendija)
 
 
 ## Manual de uso 

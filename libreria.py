@@ -406,7 +406,8 @@ def multimatrices(M,N):
                     new = multiplicar(M[fila][it],N[it][col])
                     old = rta[fila][col] 
                     rta[fila][col] = (new[0]+old[0], new[1]+old[1])
-        return rta
+    return rta
+      
 
 def accion(M,v):
 
@@ -572,9 +573,9 @@ def productoTensor(M,N):
             subLista = []
             valorA +=1
             valorB += 1
-    for i in range(len(aux)):
-        print(*aux[i])
-    return aux
+    #for i in range(len(aux)):
+    #    print(*aux[i])
+    #return aux
 
 
 #productoTensor([[(0,0),(1,0)],[(1,0),(0,0)]],[[(1/m.sqrt(2),0),(1/m.sqrt(2),0)],[(1/m.sqrt(2),0),(-1/m.sqrt(2),0)]])

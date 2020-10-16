@@ -253,6 +253,27 @@ def sumarmatrices(M,N):
             rta.append(sumavectores(M[i],N[i]))
     return rta
 
+def restarmatrices(M,N):
+    
+    """ Description resta dos matrices M,N
+    :type M: matrix 
+    :param M: Matriz 1 escrita de la forma [[(a,b),(d,c)],[(x,y),(f,g)]]
+
+    :type N: matrix
+    :param N: Matriz 2 escrita de la forma [[(a,b),(d,c)],[(x,y),(f,g)]]
+
+    :raises: Exception - en caso que las matrices no tengan tamaños equivalentes
+
+    :rtype: matrix- matriz resultante de la forma [[(a,b),(d,c)],[(x,y),(f,g)]]
+    """
+    if (len(M) != len(N)):
+        raise Exception("Las matrices no se puede restar porque tienen tamaños distintos")
+    else:
+        rta = []
+        for i in range(len(M)):
+            rta.append(restavectores(M[i],N[i]))
+    return rta
+
 def inversomatriz(M):
 
     """ Description: retorna el inverso aditivo de la matriz M
@@ -294,11 +315,15 @@ def transpuestamatriz(M):
     :rtype: matrix
     """
     trans = []
-    for fil in range(len(M[0])):
-        fila = []
-        for col in range(len(M)):
-            fila.append(M[col][fil])
-        trans.append(fila)
+    if (len(M[0]) == 1):
+        for elem in range(len(M)):
+            trans.append(M[elem][0])
+    else:
+        for fil in range(len(M[0])):
+            fila = []
+            for col in range(len(M)):
+                fila.append(M[col][fil])
+            trans.append(fila)
     return trans
 
 def transpuestavector(v):
@@ -573,9 +598,9 @@ def productoTensor(M,N):
             subLista = []
             valorA +=1
             valorB += 1
-    #for i in range(len(aux)):
-    #    print(*aux[i])
-    #return aux
+    for i in range(len(aux)):
+        print(*aux[i])
+    return aux
 
 
 #productoTensor([[(0,0),(1,0)],[(1,0),(0,0)]],[[(1/m.sqrt(2),0),(1/m.sqrt(2),0)],[(1/m.sqrt(2),0),(-1/m.sqrt(2),0)]])
@@ -586,3 +611,8 @@ def productoTensor(M,N):
 #print(productointernovectores([(0,1/m.sqrt2(2)),(0,1/m.sqrt(2))],[]))
 #print(productointernovectores([[(0,1)],[(1,-1)]]))
 #print(multimatrices([[(0,1),(-1,1)],[(2,0),(1,0)]],dagamatriz([[(1,0),(-1,0)],[(0,-1),(0,2)]])))
+#productoTensor([[(0,0),(1/6,0),(5/6,0)],
+       #               [(1/3,0),(1/2,0),(1/6,0)],
+        #              [(2/3,0),(1/3,0),(0,0)]],[[(0,0),(1/6,0),(5/6,0)],
+         #             [(1/3,0),(1/2,0),(1/6,0)],
+          #            [(2/3,0),(1/3,0),(0,0)]])

@@ -1,7 +1,6 @@
 import libreria as lib, math as m
 import numpy as np
 import matplotlib.pyplot as plot
-import requests as req
 
 def dinamica(M,v,t):
 
@@ -102,6 +101,11 @@ def amplitudtransicion(keth1,keth2):
     rta = normav1 * normav2
     return lib.division(lib.productointernovectores(keth1,keth2),(rta,0))
 
+def probabilidadtransicion(ket1,ket2):
+    ampt = amplitudtransicion(ket1,ket2)
+
+    return lib.modulo(ampt)
+
 def eigenvalues(omega):
     
     """ Description calcula los valores propios de omega
@@ -119,7 +123,6 @@ def eigenvalues(omega):
     rta1 , rta2 = np.linalg.eigh(mat1)
     return [rta1[0],rta1[1]]    
 
-#print(eigenvalues([[(-1,0),(0,-1)],[(0,1),(1,0)]]))
 
 def eigenvectors(omega):
 
@@ -139,14 +142,23 @@ def eigenvectors(omega):
     rta1 , rta2 = np.linalg.eigh(mat1)
     return rta2
 
-def graphproba(v):
+def graphproba(v,title):
     data = len(v)
     x = np.array([ x for x in range( data )])
     y = np.array([ round(v[x][0]*100,2) for x in range( data )])
 
-    plot.bar( x,y , color ='b', align='center')
-    plot.title('Probabilidades')
+    plot.bar( x,y , color ='r', align='center')
+    plot.title(title)
     plot.show()
+
+def graph432(data):
+
+    x = ["State 1","State 2"]
+
+    plot.bar( x,data , align='center')
+    plot.title("Graph 4.3.2")
+    plot.show()
+
 
 
 

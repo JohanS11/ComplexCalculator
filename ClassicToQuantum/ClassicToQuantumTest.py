@@ -68,9 +68,9 @@ class TestClassicToQuantum(unittest.TestCase):
         vectores2 = str(cq.eigenvectors(Sy))
         vectores3 = str(cq.eigenvectors(Sz))
 
-        print("Valores propios Sx :: " + valoresp1)
-        print("Valores propios Sy :: " + valoresp2)
-        print("Valores propios Sz :: " + valoresp3)
+        print("Valores propios Sx : " + valoresp1)
+        print("Valores propios Sy : " + valoresp2)
+        print("Valores propios Sz : " + valoresp3)
         print("-----------------")
         print("Estados a los que puede ir Sx \n"+vectores1)
         print("Estados a los que puede ir Sy \n"+vectores2)
@@ -83,10 +83,12 @@ class TestClassicToQuantum(unittest.TestCase):
         estado1 = [(0,1),(1,0)]
         estado2 = [(0,-1),(1,0)]
 
-        print("Probabilidad de transicion a 1 :: "+ str(cq.amplitudtransicion(initialState,estado1)))
-        print("Probabilidad de transicion a 2 :: "+ str(cq.amplitudtransicion(initialState,estado2)))
+        print("Probabilidad de transicion a 1 :: "+ str(cq.probabilidadtransicion(initialState,estado1)))
+        print("Probabilidad de transicion a 2 :: "+ str(cq.probabilidadtransicion(initialState,estado2)))
 
-    def testEjercicio_4_4_1(self):
+        cq.graph432( [0.709, 0.709])
+
+    def testEjercicio_4_4_1(self):  
         print("")
         print("----Ejercicio 4.4.1----")
 
@@ -126,7 +128,7 @@ class TestClassicToQuantum(unittest.TestCase):
     def testdeberiagraficarprobabilidades(self):
         cq.graphproba( [ [0,0] ,[0,0] ,[0,0] ,
                         [1/6,0],[1/6,0],[1/3,0],
-                        [1/6,0],[1/6,0]] )
+                        [1/6,0],[1/6,0]],"test graph" )
 
 if __name__ == '__main__' :
     unittest.main()

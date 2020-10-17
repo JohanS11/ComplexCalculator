@@ -57,6 +57,8 @@
 ```
   
 ## Tests Execution
+
+  **Note:** Close the graphs in order to continue the test execution
   
    ![pruebas1](img/gtest.jpg)
    
@@ -81,7 +83,6 @@
   **Exercise 4.4.2**
  
   ![pruebas2](img/442.jpg)
-  
   
 
   ## Este proyecto fue construido con

@@ -450,8 +450,7 @@ def accion(M,v):
     if (len(M[0]) != len(v)):
         raise Exception("El tamaño de la matriz y el vector no son compatibles") 
     else: 
-        vector = transpuestavector(v)
-        return multimatrices(M,vector)
+        return multimatrices(M,v)
 
 def productointernovectores(v,w):
 
